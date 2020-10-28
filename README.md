@@ -24,3 +24,6 @@ Run Custom vagrant file
 ```
 VAGRANT_VAGRANTFILE=<vagrant_file> vagrant up
 ```
+
+# TODO
+Finish ssh-key generation and distribution and /etc/hosts creation
