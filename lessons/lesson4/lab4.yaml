@@ -8,20 +8,20 @@
 - hosts: a2
   tasks:
   - yum:
-    name: httpd
-    state: latest
+      name: httpd
+      state: latest
 
   - firewalld:
-    service: http
-    permanent: yes
-    state: enabled
+      service: http
+      permanent: yes
+      state: enabled
 
   - systemd:
-    state: started
-    name: httpd
-    enabled: yes
-    
+      state: started
+      name: httpd
+      enabled: yes
+
   - name: Copy using inline content
     copy:
-    content: 'HELLO APACHE WORLD'
-    dest: /var/www/html/index.html
+      content: 'HELLO APACHE WORLD'
+      dest: /var/www/html/index.html

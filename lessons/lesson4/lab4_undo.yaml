@@ -7,19 +7,19 @@
 - hosts: a2
   tasks:
   - systemd:
-    state: stopped
-    name: httpd
-    enabled: no
+      state: stopped
+      name: httpd
+      enabled: no
 
   - name: Remove file (delete file)
     file:
-    path: /var/www/html/index.html
-    state: absent
+      path: /var/www/html/index.html
+      state: absent
   
   - firewalld:
-    service: http
-    permanent: yes
-    state: disabled
+      service: http
+      permanent: yes
+      state: disabled
 
   - yum:
     name: httpd
